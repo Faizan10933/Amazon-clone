@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-grq$c7n7c=5)gi^j3cwoc0jn)u7lzfp%n)zjwgg1$o=sz5tdtb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','amazon20.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1','amazon20.herokuapp.com']
 
 
 # Application definition
@@ -122,6 +122,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 
 #Managing Media
